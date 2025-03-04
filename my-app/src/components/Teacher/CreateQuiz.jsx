@@ -40,7 +40,7 @@ const CreateQuiz = () => {
     setError('');
     setSuccess('');
 
-    if (!quiz.title || quiz.questions.length === 0) {
+    if (!quiz.title || quiz.questions?.length === 0) {
       setError('Please add a title and at least one question.');
       return;
     }

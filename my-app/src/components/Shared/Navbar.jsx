@@ -25,6 +25,9 @@ const Navbar = () => {
             Parent Dashboard
           </Link>
         )}
+        <Link to="/whiteboards" style={styles.link}>
+          View Whiteboards
+        </Link>
       </div>
       <div style={styles.right}>
         {user ? (

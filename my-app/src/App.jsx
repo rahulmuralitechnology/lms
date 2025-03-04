@@ -8,6 +8,7 @@ import Register from './components/Auth/Register';
 import TeacherDashboard from './components/Teacher/TeacherDashboard';
 import StudentDashboard from './components/Student/StudentDashboard';
 import ParentDashboard from './components/Parent/ParentDashboard';
+import ViewWhiteboards from './components/ViewWhiteboards'; 
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/teacher" element={<TeacherDashboard />} />
           <Route path="/student" element={<StudentDashboard />} />
           <Route path="/parent" element={<ParentDashboard />} />
+          <Route path="/whiteboards" element={<ViewWhiteboards />} />
 
           {/* 404 Page (Optional) */}
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />

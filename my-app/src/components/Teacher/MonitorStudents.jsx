@@ -18,7 +18,7 @@ const MonitorStudents = () => {
   return (
     <div style={styles.container}>
       <h2>Monitor Students</h2>
-      {submissions.length > 0 ? (
+      {submissions?.length > 0 ? (
         submissions.map((submission) => (
           <div key={submission.id} style={styles.card}>
             <h3>{submission.assignmentTitle}</h3>

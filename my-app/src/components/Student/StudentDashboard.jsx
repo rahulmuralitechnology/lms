@@ -45,11 +45,11 @@ const StudentDashboard = () => {
         {activeTab === 'lessons' && (
           <div>
             <h2>Lessons</h2>
-            {content.lessons.length > 0 ? (
-              content.lessons.map((lesson) => (
-                <div key={lesson.id} style={styles.card}>
-                  <h3>{lesson.title}</h3>
-                  <p>{lesson.content}</p>
+            {content?.lessons?.length > 0 ? (
+              content?.lessons?.map((lesson) => (
+                <div key={lesson?.id} style={styles?.card}>
+                  <h3>{lesson?.title}</h3>
+                  <p>{lesson?.content}</p>
                 </div>
               ))
             ) : (
@@ -61,8 +61,8 @@ const StudentDashboard = () => {
         {activeTab === 'assignments' && (
           <div>
             <h2>Assignments</h2>
-            {content.assignments.length > 0 ? (
-              content.assignments.map((assignment) => (
+            {content?.assignments?.length > 0 ? (
+              content?.assignments?.map((assignment) => (
                 <div key={assignment.id} style={styles.card}>
                   <h3>{assignment.title}</h3>
                   <p>{assignment.description}</p>
@@ -77,8 +77,8 @@ const StudentDashboard = () => {
         {activeTab === 'quizzes' && (
           <div>
             <h2>Quizzes</h2>
-            {content.quizzes.length > 0 ? (
-              content.quizzes.map((quiz) => (
+            {content?.quizzes?.length > 0 ? (
+              content?.quizzes?.map((quiz) => (
                 <div key={quiz.id} style={styles.card}>
                   <h3>{quiz.title}</h3>
                   <ul>
