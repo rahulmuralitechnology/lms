@@ -1,0 +1,63 @@
+/* RegisterTeacher.css */
+
+.register-teacher-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9fafb;
+  }
+  
+  .register-teacher-box {
+    width: 400px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-teacher-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .register-teacher-error {
+    color: #dc2626;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .register-teacher-success {
+    color: #16a34a;
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .register-teacher-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .register-teacher-button {
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .register-teacher-button:hover {
+    background-color: #2563eb;
+  }
+  

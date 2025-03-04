@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Django stuff:
+db.sqlite3
+*.sqlite3
+media/
+staticfiles/
+static/
+*.log
+
+# Secret key and environment variables
+.env
+*.pem
+
+# VS Code settings
+.vscode/
+
+# IDE/editor files
+.idea/
+*.swp
+*.swo
+*.swn
+
+# MacOS-specific files
+.DS_Store
+
+# PyCharm files
+*.iml
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Migrations (optional, useful for teams handling migrations differently)
+**/migrations/*
+
+# Node modules (if using a frontend with Django)
+node_modules/
+
+# Docker files
+*.pid
