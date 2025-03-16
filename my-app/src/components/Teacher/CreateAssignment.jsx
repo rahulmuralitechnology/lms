@@ -22,6 +22,11 @@ const CreateAssignment = () => {
 
     // Save new assignment
     const content = JSON.parse(localStorage.getItem('content')) || { assignments: [] };
+
+    if (!Array.isArray(content.assignments)) {
+      content.assignments = [];
+    }
+
     const newAssignment = { ...assignment, id: Date.now() };
     content.assignments.push(newAssignment);
     localStorage.setItem('content', JSON.stringify(content));

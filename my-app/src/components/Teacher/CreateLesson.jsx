@@ -19,11 +19,18 @@ const CreateLesson = () => {
       return;
     }
 
-    // Save new lesson
+    // Retrieve content from localStorage or initialize it
     const content = JSON.parse(localStorage.getItem('content')) || { lessons: [] };
+
+    // Ensure `lessons` is an array
+    if (!Array.isArray(content.lessons)) {
+      content.lessons = [];
+    }
+
+    // Save new lesson
     const newLesson = { ...lesson, id: Date.now() };
-    content.lessons.push(newLesson);
-    localStorage.setItem('content', JSON.stringify(content));
+    content.lessons.push(newLesson); // Add the new lesson to the lessons array
+    localStorage.setItem('content', JSON.stringify(content)); // Save updated content back to localStorage
 
     // Show success message and reset form
     setSuccess('Lesson created successfully!');

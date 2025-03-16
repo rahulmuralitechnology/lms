@@ -47,6 +47,11 @@ const CreateQuiz = () => {
 
     // Save new quiz
     const content = JSON.parse(localStorage.getItem('content')) || { quizzes: [] };
+
+    if (!Array.isArray(content.quizzes)) {
+      content.quizzes = [];
+    }
+
     const newQuiz = { ...quiz, id: Date.now() };
     content.quizzes.push(newQuiz);
     localStorage.setItem('content', JSON.stringify(content));
