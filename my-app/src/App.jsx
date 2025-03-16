@@ -16,18 +16,13 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-
-          {/* Protected Routes */}
           <Route path="/teacher" element={<TeacherDashboard />} />
           <Route path="/student" element={<StudentDashboard />} />
           <Route path="/parent" element={<ParentDashboard />} />
           <Route path="/whiteboards" element={<ViewWhiteboards />} />
-
-          {/* 404 Page (Optional) */}
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </Router>
