@@ -14,17 +14,17 @@ const Home = () => {
       {user ? (
         <div style={styles.dashboardLinks}>
           <h2>Go to Your Dashboard</h2>
-          {user.type === 'teacher' && (
+          {user?.type === 'teacher' && (
             <Link to="/teacher" style={styles.link}>
               Teacher Dashboard
             </Link>
           )}
-          {user.type === 'student' && (
+          {user?.type === 'student' && (
             <Link to="/student" style={styles.link}>
               Student Dashboard
             </Link>
           )}
-          {user.type === 'parent' && (
+          {user?.type === 'parent' && (
             <Link to="/parent" style={styles.link}>
               Parent Dashboard
             </Link>

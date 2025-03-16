@@ -137,13 +137,13 @@ const CreateQuiz = () => {
           {quiz.questions.map((q, index) => (
             <div key={index} style={styles.questionCard}>
               <p>
-                <strong>Question {index + 1}:</strong> {q.question}
+                <strong>Question {index + 1}:</strong> {q?.question}
               </p>
               <p>
-                <strong>Options:</strong> {q.options.join(', ')}
+                <strong>Options:</strong> {q?.options?.join(', ')}
               </p>
               <p>
-                <strong>Correct Answer:</strong> {q.answer}
+                <strong>Correct Answer:</strong> {q?.answer}
               </p>
             </div>
           ))}

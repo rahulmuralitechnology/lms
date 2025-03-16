@@ -32,12 +32,12 @@ const ParentDashboard = () => {
         {activeTab === 'monitorChild' && (
           <div>
             <h2>Child's Progress</h2>
-            {content.submissions?.length > 0 ? (
+            {content?.submissions?.length > 0 ? (
               content.submissions.map((submission) => (
-                <div key={submission.id} style={styles.card}>
-                  <h3>{submission.assignmentTitle}</h3>
-                  <p>Status: {submission.status}</p>
-                  <p>Score: {submission.score}</p>
+                <div key={submission?.id} style={styles.card}>
+                  <h3>{submission?.assignmentTitle}</h3>
+                  <p>Status: {submission?.status}</p>
+                  <p>Score: {submission?.score}</p>
                 </div>
               ))
             ) : (

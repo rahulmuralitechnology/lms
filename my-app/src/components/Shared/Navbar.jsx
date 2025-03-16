@@ -10,17 +10,17 @@ const Navbar = () => {
         <Link to="/" style={styles.link}>
           Home
         </Link>
-        {user && user.type === 'teacher' && (
+        {user && user?.type === 'teacher' && (
           <Link to="/teacher" style={styles.link}>
             Teacher Dashboard
           </Link>
         )}
-        {user && user.type === 'student' && (
+        {user && user?.type === 'student' && (
           <Link to="/student" style={styles.link}>
             Student Dashboard
           </Link>
         )}
-        {user && user.type === 'parent' && (
+        {user && user?.type === 'parent' && (
           <Link to="/parent" style={styles.link}>
             Parent Dashboard
           </Link>

@@ -7,7 +7,7 @@ const MonitorStudents = () => {
   // Fetch submissions from localStorage
   useEffect(() => {
     const content = JSON.parse(localStorage.getItem('content')) || { submissions: [] };
-    setSubmissions(content.submissions);
+    setSubmissions(content?.submissions || []);
     setLoading(false);
   }, []);
 
@@ -20,19 +20,19 @@ const MonitorStudents = () => {
       <h2>Monitor Students</h2>
       {submissions?.length > 0 ? (
         submissions.map((submission) => (
-          <div key={submission.id} style={styles.card}>
-            <h3>{submission.assignmentTitle}</h3>
+          <div key={submission?.id} style={styles.card}>
+            <h3>{submission?.assignmentTitle}</h3>
             <p>
-              <strong>Student:</strong> {submission.studentName}
+              <strong>Student:</strong> {submission?.studentName}
             </p>
             <p>
-              <strong>Status:</strong> {submission.status}
+              <strong>Status:</strong> {submission?.status}
             </p>
             <p>
-              <strong>Score:</strong> {submission.score}
+              <strong>Score:</strong> {submission?.score}
             </p>
             <p>
-              <strong>Submitted On:</strong> {submission.submittedOn}
+              <strong>Submitted On:</strong> {submission?.submittedOn}
             </p>
           </div>
         ))

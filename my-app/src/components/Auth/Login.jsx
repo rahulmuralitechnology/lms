@@ -25,7 +25,7 @@ const Login = () => {
     if (success) {
       // Redirect based on user role
       const user = JSON.parse(localStorage.getItem('currentUser'));
-      switch (user.type) {
+      switch (user?.type) {
         case 'teacher':
           navigate('/teacher');
           break;

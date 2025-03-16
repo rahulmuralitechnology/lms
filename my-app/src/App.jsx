@@ -8,7 +8,7 @@ import Register from './components/Auth/Register';
 import TeacherDashboard from './components/Teacher/TeacherDashboard';
 import StudentDashboard from './components/Student/StudentDashboard';
 import ParentDashboard from './components/Parent/ParentDashboard';
-import ViewWhiteboards from './components/ViewWhiteboards'; 
+import ViewWhiteboards from './components/ViewWhiteboards';
 
 function App() {
   return (

@@ -46,8 +46,8 @@ const StudentDashboard = () => {
           <div>
             <h2>Lessons</h2>
             {content?.lessons?.length > 0 ? (
-              content?.lessons?.map((lesson) => (
-                <div key={lesson?.id} style={styles?.card}>
+              content.lessons.map((lesson) => (
+                <div key={lesson?.id} style={styles.card}>
                   <h3>{lesson?.title}</h3>
                   <p>{lesson?.content}</p>
                 </div>
@@ -62,10 +62,10 @@ const StudentDashboard = () => {
           <div>
             <h2>Assignments</h2>
             {content?.assignments?.length > 0 ? (
-              content?.assignments?.map((assignment) => (
-                <div key={assignment.id} style={styles.card}>
-                  <h3>{assignment.title}</h3>
-                  <p>{assignment.description}</p>
+              content.assignments.map((assignment) => (
+                <div key={assignment?.id} style={styles.card}>
+                  <h3>{assignment?.title}</h3>
+                  <p>{assignment?.description}</p>
                 </div>
               ))
             ) : (
@@ -78,15 +78,15 @@ const StudentDashboard = () => {
           <div>
             <h2>Quizzes</h2>
             {content?.quizzes?.length > 0 ? (
-              content?.quizzes?.map((quiz) => (
-                <div key={quiz.id} style={styles.card}>
-                  <h3>{quiz.title}</h3>
+              content.quizzes.map((quiz) => (
+                <div key={quiz?.id} style={styles.card}>
+                  <h3>{quiz?.title}</h3>
                   <ul>
-                    {quiz.questions.map((question, index) => (
+                    {quiz?.questions?.map((question, index) => (
                       <li key={index}>
-                        <p>{question.question}</p>
+                        <p>{question?.question}</p>
                         <ul>
-                          {question.options.map((option, i) => (
+                          {question?.options?.map((option, i) => (
                             <li key={i}>{option}</li>
                           ))}
                         </ul>

@@ -6,21 +6,21 @@ const ViewWhiteboards = () => {
   useEffect(() => {
     // Retrieve saved whiteboard drawings from localStorage
     const content = JSON.parse(localStorage.getItem('content')) || { whiteboards: [] };
-    setWhiteboards(content.whiteboards);
+    setWhiteboards(content?.whiteboards || []);
   }, []);
 
   return (
     <div style={styles.container}>
       <h2>Saved Whiteboard Drawings</h2>
-      {whiteboards.length > 0 ? (
+      {whiteboards?.length > 0 ? (
         whiteboards.map((whiteboard) => (
-          <div key={whiteboard.id} style={styles.whiteboardCard}>
+          <div key={whiteboard?.id} style={styles.whiteboardCard}>
             <img
-              src={whiteboard.dataUrl}
-              alt={`Whiteboard Drawing ${whiteboard.id}`}
+              src={whiteboard?.dataUrl}
+              alt={`Whiteboard Drawing ${whiteboard?.id}`}
               style={styles.whiteboardImage}
             />
-            <p>Drawing ID: {whiteboard.id}</p>
+            <p>Drawing ID: {whiteboard?.id}</p>
           </div>
         ))
       ) : (
